@@ -1,3 +1,8 @@
+# -- DEPRECATION WARNING --
+This repo has been moved to https://github.com/BattlesnakeOfficial/engine and will eventually be archived.
+
+---
+
 # Battlesnake Engine
 
 [![Build Status](https://travis-ci.com/battlesnakeio/engine.svg?branch=master)](https://travis-ci.com/battlesnakeio/engine)
