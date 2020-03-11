@@ -1,5 +1,5 @@
 # -- DEPRECATION WARNING --
-This repo has been moved to https://github.com/BattlesnakeOfficial/engine and will eventually be archived.
+This repo is no longer active and the engine code is now managed internally by Battlesnake. The Battlesnake Rule Set continues to be open source and can be found here: (https://github.com/BattlesnakeOfficial/rules)
 
 ---
 
