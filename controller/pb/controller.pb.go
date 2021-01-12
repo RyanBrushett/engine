@@ -37,13 +37,19 @@ It has these top-level messages:
 */
 package pb
 
-import proto "github.com/gogo/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import _ "github.com/gogo/protobuf/gogoproto"
+import (
+	fmt "fmt"
 
-import context "golang.org/x/net/context"
-import grpc "google.golang.org/grpc"
+	proto "github.com/gogo/protobuf/proto"
+
+	math "math"
+
+	_ "github.com/gogo/protobuf/gogoproto"
+
+	context "golang.org/x/net/context"
+
+	grpc "google.golang.org/grpc"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
@@ -406,10 +412,12 @@ type ListGameFramesRequest struct {
 	Offset int32  `protobuf:"varint,3,opt,name=Offset,proto3" json:"Offset,omitempty"`
 }
 
-func (m *ListGameFramesRequest) Reset()                    { *m = ListGameFramesRequest{} }
-func (m *ListGameFramesRequest) String() string            { return proto.CompactTextString(m) }
-func (*ListGameFramesRequest) ProtoMessage()               {}
-func (*ListGameFramesRequest) Descriptor() ([]byte, []int) { return fileDescriptorController, []int{14} }
+func (m *ListGameFramesRequest) Reset()         { *m = ListGameFramesRequest{} }
+func (m *ListGameFramesRequest) String() string { return proto.CompactTextString(m) }
+func (*ListGameFramesRequest) ProtoMessage()    {}
+func (*ListGameFramesRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptorController, []int{14}
+}
 
 func (m *ListGameFramesRequest) GetID() string {
 	if m != nil {

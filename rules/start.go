@@ -10,6 +10,7 @@ import (
 
 // SnakeMetadata contains a snake and the metadata sent in the start response
 // from the snake server.
+// apiversion, author, color, head, tail
 type SnakeMetadata struct {
 	Snake *pb.Snake
 	Color string
@@ -40,6 +41,18 @@ func toSnakeStartResponse(resp snakeResponse) SnakeMetadata {
 	}
 }
 
+// Height int          `json:"height"`
+// Width  int          `json:"width"`
+// Food   []Coordinate `json:"food"`
+// Snakes []Snake      `json:"snakes"`
+// {
+//     "apiversion": "1",
+//     "author" : "my_user_name",
+//     "color": "#888888",
+//     "head" : "default",
+//     "tail": "default"
+// }
+
 func isValidColour(colour string) bool {
 	var re = regexp.MustCompile(`^#?[a-fA-F0-9]{6}$`)
 	return re.Match([]byte(colour))
@@ -67,7 +80,7 @@ func notifyGameStart(game *pb.Game, startState *pb.GameFrame) {
 
 func gatherSnakeStartResponses(timeout time.Duration, game *pb.Game, startState *pb.GameFrame) []SnakeMetadata {
 	responses := gatherAllSnakeResponses(multiSnakeRequest{
-		url:     "start",
+		url:     "",
 		timeout: timeout,
 		game:    game,
 		frame:   startState,

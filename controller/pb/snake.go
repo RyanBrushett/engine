@@ -10,11 +10,11 @@ func (s *Snake) Move(direction string) {
 	switch direction {
 	case "up":
 		s.Body = append([]*Point{
-			{X: h.X, Y: h.Y - 1},
+			{X: h.X, Y: h.Y + 1},
 		}, s.Body...)
 	case "down":
 		s.Body = append([]*Point{
-			{X: h.X, Y: h.Y + 1},
+			{X: h.X, Y: h.Y - 1},
 		}, s.Body...)
 	case "left":
 		s.Body = append([]*Point{

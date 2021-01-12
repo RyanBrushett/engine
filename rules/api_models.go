@@ -9,11 +9,13 @@ type MoveResponse struct {
 	Move string
 }
 
-// StartResponse is the format for /start responses
+// StartResponse is the format for / responses
 type StartResponse struct {
-	Color    string
-	HeadType string
-	TailType string
+	Color      string `json:"color"`
+	HeadType   string `json:"head"`
+	TailType   string `json:"tail"`
+	Author     string `json:"author"`
+	Apiversion string `json:"apiversion"`
 }
 
 // SnakeRequest the message send for all snake api calls
